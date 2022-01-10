@@ -13,9 +13,6 @@ docker container run -d \
     jenkins/jenkins:lts-jdk11
 
 
-
-
-
 ####Check docker process
 docker ps
 
