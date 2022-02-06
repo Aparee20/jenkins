@@ -2,6 +2,7 @@ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11
 
 #####  TO save the jenkins  chages and  persist them create a volumne
 
+
 ####create a volumne
 docker volume create jenkins-save
 

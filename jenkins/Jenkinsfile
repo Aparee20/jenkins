@@ -1,10 +1,15 @@
 pipeline {
     agent any
-
+    parameters {
+        string(name: 'Repo', defaultValue: 'jenkins', description: 'The configuration file to deploy')
+        string(name: 'BRANCH', defaultValue: 'master', description: 'The configuration file to deploy')
+    }
     stages {
-        stage('Build') {
+        stage('Git Checkout') {
             steps {
-                echo 'Building..'
+                dir('dirname') {
+                    git branch: 'master', credentialsId: '9cb7f870-8a8a-4800-b12d-78074a5b9e40', url: 'https://github.com/Aparee20/jenkins'
+                }
             }
         }
         stage('Test') {
