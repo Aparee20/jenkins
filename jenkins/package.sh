@@ -5,7 +5,6 @@ source ../version.config
 build_version:$build_version
 
 
-
 echo "Packaging Build version >>>> "$build_version
 
 branch_name=$(git symbolic-ref -q HEAD)
